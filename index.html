@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Register Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="header">
+        <div class="header-leftgroup">
+              <img src="images/logo.png" alt="" />
+              <p class="header-title">DevRev</p>   
+        </div>
+        <div class="header-rightgroup">
+            <button class="header-menu black">
+                <span class="header-menu-title">Menu</span>
+                <span class="header-menu-subtitle">Company, Career, Circle </span>
+              </button> 
+        </div>  
+    </div>
+    <div class="body-section">
+        <div class="left-body">
+            <img src="images/login-girl.webp" alt="">
+        </div>
+        <div class="right-body">
+            <div class="employee-register-form">
+                <div class="title">Employee Registration Form</div>
+                <form>
+                  <div class="input-area">
+                    <label>First Name</label>
+                    <input
+                      type="text"
+                      id="first-name"
+                      placeholder="First Name"
+                      required
+                    />
+                    <div class="error"></div>
+                  </div>
+                  <div class="input-area">
+                    <label>Last Name</label>
+                    <input
+                      type="text"
+                      id="last-name"
+                      placeholder="Last Name"
+                      required
+                    />
+                    <div class="error"></div>
+                  </div>
+                  <div class="input-area">
+                    <label>Password</label>
+                    <input type="text" id="password" placeholder="Password" required />
+                    <div class="error"></div>
+                  </div>
+                  <div class="input-area">
+                    <label>Confirm Password</label>
+                    <input
+                      type="text"
+                      id="confirm-password"
+                      placeholder="Confirm Password"
+                      required
+                    />
+                    <div class="error"></div>
+                  </div>
+                  <div class="input-area">
+                    <label>Gender</label>
+                    <select id="gender" required>
+                      <option value="female">Female</option>
+                      <option value="male">Male</option>
+                    </select>
+                  </div>
+                  <div class="input-area">
+                    <label>Date of Birth</label>
+                    <input type="date" id="birthday" required />
+                    <div class="error"></div>
+                  </div>
+                  <div class="input-area">
+                      <label>Email Address</label>
+                    <input
+                      type="text"
+                      id="email"
+                      placeholder="Email Address"
+                      required
+                    />
+                    <div class="error"></div>
+                  </div>
+                  <div class="input-area">
+                    
+                    <label>Phone Number</label>
+                    <input type="text" id="phone" placeholder="Phone Number" />
+                    <div class="error"></div>
+                  </div>
+                  <div class="check-terms">
+                    <input type="checkbox" id="terms" name="terms" >
+                    <label>Agree to privacy terms and conditions</label>
+                  </div>
+                  <div class="submit">
+                    <button id="submit">Submit</button>
+                  </div>
+                </form>
+              </div>  
+        </div>
+    </div>
+    <script src="dist/index.js"></script>
+</body>
+</html>
