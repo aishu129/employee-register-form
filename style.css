@@ -135,19 +135,27 @@
     font-size: 18px;
     font-weight: 400;
 }
-.submit {
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn {
     text-align: center;
 }
 
-.submit button{
+.btn button{
     
     font-size: 16px;
     font-weight: 400;
     background: yellow;
     color: black;
-    width: 30%;
+    width: 200px;
     height: 50px;
 }
+
+
 .input-area input:focus {
     outline: 0;
 }
@@ -159,7 +167,7 @@
 
 .error input{
     border: #ff3860;
-    /* background: #ff3860; */
+    /* giit */
 }
 
 .input-area .error {
@@ -181,7 +189,7 @@
     display: flex;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
     .employee-register-form .input-area input{  
         width: 100px;
     }
@@ -189,7 +197,6 @@
     .body-section {
         position: absolute;
         width: 200%;
-        height: 200%;
         display: block;
     }
 
