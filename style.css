@@ -113,14 +113,6 @@
 }
 
 
-@media only screen and (max-width: 600px) {
-    #gender {
-        width:53%;
-    }
-    .employee-register-form .input-area input{  
-        width: 100px;
-    }
-  }
 
 
 
@@ -179,3 +171,23 @@
     display: flex;
 }
 
+@media only screen and (max-width: 600px) {
+    #gender {
+        width:53%;
+    }
+    .employee-register-form .input-area input{  
+        width: 100px;
+    }
+
+    .body-section {
+        position: absolute;
+        width: 200%;
+        height: 200%;
+        display: block;
+    }
+
+    .left-body img {
+        width: 100%;
+    }
+
+  }
