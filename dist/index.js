@@ -9,6 +9,12 @@ const validateEmail = (email) => {
     return result;
 };
 function verifyPassword(password1, password2) {
+    if (password1 == "") {
+        return false;
+    }
+    if (password2 == "") {
+        return false;
+    }
     if (password1 === password2)
         return true;
     else
@@ -47,6 +53,14 @@ function validateName(name) {
     }
     return true;
 }
+function validateCheckBox(checkbox) {
+    if (checkbox === null || checkbox === void 0 ? void 0 : checkbox.checked) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
 const setError = (element, message) => {
     const inputControl = element.parentElement;
     const errorDisplay = inputControl.querySelector('.error');
@@ -71,8 +85,7 @@ var submitForm = (e) => {
     var phone = document.getElementById("phone");
     var gender = document.getElementById("gender");
     var dob = document.getElementById("birthday");
-    var check = document.getElementById("terms");
-    console.log(check.value);
+    const checkbox = document.getElementById('terms');
     if (validateName(firstName.value)) {
         setSuccess(firstName);
     }
@@ -87,17 +100,17 @@ var submitForm = (e) => {
     }
     if (validatePassword(password.value)) {
         setSuccess(password);
+        if (verifyPassword(password.value, confirm_password.value)) {
+            setSuccess(password);
+            setSuccess(confirm_password);
+        }
+        else {
+            setError(password, "Mismatch Password");
+            setError(confirm_password, "Mismatch Password");
+        }
     }
     else {
         setError(password, "Invalid Password");
-    }
-    if (verifyPassword(password.value, confirm_password.value)) {
-        setSuccess(password);
-        setSuccess(confirm_password);
-    }
-    else {
-        setError(password, "Mismatch Password");
-        setError(confirm_password, "Mismatch Password");
     }
     if (validateEmail(email.value)) {
         setSuccess(email);
@@ -116,6 +129,12 @@ var submitForm = (e) => {
     }
     else {
         setError(dob, "Invalid Age");
+    }
+    if (validateCheckBox(checkbox)) {
+        setSuccess(checkbox);
+    }
+    else {
+        setError(checkbox, "Please Accept Terms and Conditions");
     }
 };
 var submitButton = document.getElementById("submit");

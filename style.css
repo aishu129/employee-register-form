@@ -94,18 +94,21 @@
 
 }
 .employee-register-form .input-area input{   
-    width:100%;
+    width:80%;
     height: 30px;
-    flex-basis: 50%;
+    flex-basis: 40%;
     border-radius: 20px;
     outline: none;
     border: white;
+    margin-right: 10px;
 }
 
-
+.input-area {
+    display: flex;
+}
 
 #gender{
-    width:51%;
+    flex-basis: 40%;
     height: 30px;
     border-radius: 20px;
     outline: none;
@@ -117,7 +120,7 @@
 
 
 .employee-register-form label {
-    flex-basis: 40%;
+    flex-basis: 20%;
     font-size: 16px;
     font-weight: 400;
 }
@@ -164,17 +167,21 @@
     font-size: 16px;
     height: 13px;
     font-weight: 400;
-
 }
+
+.check-terms .error {
+    color: #ff3860;
+    font-size: 16px;
+    height: 13px;
+    font-weight: 400;
+}
+
 
 .input-area {
     display: flex;
 }
 
 @media only screen and (max-width: 600px) {
-    #gender {
-        width:53%;
-    }
     .employee-register-form .input-area input{  
         width: 100px;
     }
@@ -186,8 +193,6 @@
         display: block;
     }
 
-    .left-body img {
-        width: 100%;
-    }
+    
 
   }

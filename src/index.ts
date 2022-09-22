@@ -10,6 +10,12 @@ const validateEmail = (email: string) => {
 }
 
 function verifyPassword(password1: string, password2: string) {
+    if (password1 == "") {
+        return false
+    }
+    if (password2 == "") {
+        return false
+    }
     if (password1 === password2)
         return true
     else
@@ -56,6 +62,14 @@ function validateName(name: string): boolean {
     return true
 }
 
+function validateCheckBox(checkbox: any): boolean {
+    if (checkbox?.checked) {
+        return true
+      } else {
+        return false
+      }
+}
+
 
 const setError = (element: any, message: string) => {
     const inputControl = element.parentElement;
@@ -86,9 +100,9 @@ var submitForm = (e: any) => {
     var phone = (document.getElementById("phone") as HTMLInputElement)
     var gender = (document.getElementById("gender") as HTMLInputElement)
     var dob = (document.getElementById("birthday") as HTMLInputElement)
-    var check = (document.getElementById("terms") as HTMLInputElement)
+    const checkbox = document.getElementById('terms') as HTMLInputElement | null;
+
     
-    console.log(check.value.checked);
     
     if (validateName(firstName.value)) {
         setSuccess(firstName)
@@ -106,19 +120,21 @@ var submitForm = (e: any) => {
 
     if (validatePassword(password.value)) {
         setSuccess(password)
+        if (verifyPassword(password.value,confirm_password.value)) {
+            setSuccess(password)
+            setSuccess(confirm_password)
+        }
+        else {
+            setError(password, "Mismatch Password")
+            setError(confirm_password, "Mismatch Password")
+        }
+
     }
     else {
         setError(password, "Invalid Password")
     }
 
-    if (verifyPassword(password.value,confirm_password.value)) {
-        setSuccess(password)
-        setSuccess(confirm_password)
-    }
-    else {
-        setError(password, "Mismatch Password")
-        setError(confirm_password, "Mismatch Password")
-    }
+    
 
     if (validateEmail(email.value)) {
         setSuccess(email)
@@ -136,9 +152,14 @@ var submitForm = (e: any) => {
 
     if (validateAge(dob.value)) {
         setSuccess(dob)
-    }
-    else {
+    } else {
         setError(dob, "Invalid Age")
+    }
+
+    if(validateCheckBox(checkbox)) {
+        setSuccess(checkbox)
+    } else {
+        setError(checkbox,"Please Accept Terms and Conditions")
     }
 
 };
