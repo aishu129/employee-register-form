@@ -94,21 +94,18 @@
 
 }
 .employee-register-form .input-area input{   
-    width:80%;
+    width:100%;
     height: 30px;
-    flex-basis: 40%;
+    flex-basis: 50%;
     border-radius: 20px;
     outline: none;
     border: white;
-    margin-right: 10px;
 }
 
-.input-area {
-    display: flex;
-}
+
 
 #gender{
-    flex-basis: 40%;
+    width:51%;
     height: 30px;
     border-radius: 20px;
     outline: none;
@@ -120,7 +117,7 @@
 
 
 .employee-register-form label {
-    flex-basis: 20%;
+    flex-basis: 40%;
     font-size: 16px;
     font-weight: 400;
 }
@@ -175,21 +172,18 @@
     font-size: 16px;
     height: 13px;
     font-weight: 400;
-}
+    display: none;
 
-.check-terms .error {
-    color: #ff3860;
-    font-size: 16px;
-    height: 13px;
-    font-weight: 400;
 }
-
 
 .input-area {
     display: flex;
 }
 
 @media only screen and (max-width: 800px) {
+    #gender {
+        width:53%;
+    }
     .employee-register-form .input-area input{  
         width: 100px;
     }
@@ -200,6 +194,213 @@
         display: block;
     }
 
-    
+    .left-body img {
+        width: 100%;
+    }
 
   }
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+  * {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+  }
+  
+  .header {
+      background: blue;
+      width: 100%;
+      height: 80px;
+      display: flex;
+      justify-content: space-between;
+  }
+  
+  
+  .header-leftgroup {
+      display: flex;
+      
+  }
+  
+  .header-title {
+      font-size: 20px;
+      font-weight: 400;
+      display: flex;
+      align-items: center;
+      color: white;
+  }
+  
+  .header-leftgroup img {
+      height: 80px;
+      width: 80px;
+      padding-right: 10px;
+  }
+  
+  .header-menu {
+      display: flex;
+      flex-direction: column;
+      color: white;
+      background: black;
+      width: 100%;
+      padding: 20px;
+      
+  }
+  
+  .header-menu-title {
+      font-size: 18px;
+  }
+  
+  .header-menu-subtitle {
+      font-size: 14px;
+  }
+  
+  .left-body {
+      background: yellow;
+      width: 50%;
+      height: 785px;
+  }
+  
+  .left-body img{
+      width: 100%;
+      height: 785px;
+  }
+  
+  .right-body {
+      background: grey;
+      width: 50%;
+      height: 785px;
+  }
+  
+  .body-section {
+      display: flex;
+  }
+  
+  .employee-register-form{
+      color: white;
+      display: flex;
+      flex-direction: column;
+      padding-left: 5%;
+      
+  }
+  
+  .employee-register-form .title{
+      font-size: 20px;
+      font-weight: 800;
+      text-align: center;
+      padding: 20px;
+      
+  }
+  
+  .employee-register-form .input-area {
+      display: flex;
+      margin-bottom: 30px;
+  
+  }
+  .employee-register-form .input-area input{   
+      width:80%;
+      height: 30px;
+      flex-basis: 40%;
+      border-radius: 20px;
+      outline: none;
+      border: white;
+      margin-right: 10px;
+  }
+  
+  .input-area {
+      display: flex;
+  }
+  
+  #gender{
+      flex-basis: 40%;
+      height: 30px;
+      border-radius: 20px;
+      outline: none;
+      border: none;   
+  }
+  
+  
+  
+  
+  
+  .employee-register-form label {
+      flex-basis: 20%;
+      font-size: 16px;
+      font-weight: 400;
+  }
+  
+  .check-terms {
+      margin-bottom: 30px;
+      text-align: center;
+      
+  }
+  
+  .check-terms label {
+      font-size: 18px;
+      font-weight: 400;
+  }
+  
+  .buttons {
+      display: flex;
+      justify-content: space-around;
+  }
+  
+  .btn {
+      text-align: center;
+  }
+  
+  .btn button{
+      
+      font-size: 16px;
+      font-weight: 400;
+      background: yellow;
+      color: black;
+      width: 200px;
+      height: 50px;
+  }
+  
+  
+  .input-area input:focus {
+      outline: 0;
+  }
+  
+  .success input{
+      border: #09c372;
+      /* background: #09c372; */
+  }
+  
+  .error input{
+      border: #ff3860;
+      /* giit */
+  }
+  
+  .input-area .error {
+      color: #ff3860;
+      font-size: 16px;
+      height: 13px;
+      font-weight: 400;
+  }
+  
+  .check-terms .error {
+      color: #ff3860;
+      font-size: 16px;
+      height: 13px;
+      font-weight: 400;
+  }
+  
+  
+  .input-area {
+      display: flex;
+  }
+  
+  @media only screen and (max-width: 800px) {
+      .employee-register-form .input-area input{  
+          width: 100px;
+      }
+  
+      .body-section {
+          position: absolute;
+          width: 200%;
+          display: block;
+      }
+  
+      
+  
+    }

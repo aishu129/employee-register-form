@@ -76,6 +76,7 @@ const setError = (element: any, message: string) => {
     const errorDisplay = inputControl.querySelector('.error');
 
     errorDisplay.innerText = message;
+    errorDisplay.style.display="block"
     inputControl.classList.add('error');
     inputControl.classList.remove('success')
 }
@@ -83,7 +84,8 @@ const setError = (element: any, message: string) => {
 const setSuccess = (element: any) => {
     const inputControl = element.parentElement;
     const errorDisplay = inputControl.querySelector('.error');
-
+    
+    errorDisplay.style.display="none"
     errorDisplay.innerText = '';
     inputControl.classList.add('success');
     inputControl.classList.remove('error');
